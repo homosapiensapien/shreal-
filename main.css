@@ -1,0 +1,96 @@
+body {
+  font-family: 'Comic Sans MS', sans-serif;
+
+  background-image: url(assets/images/shreal.png);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  font-size: clamp(4rem, 8.5vw, 7.5rem);
+  animation: rainbow 7.5s linear;
+	animation-iteration-count: infinite;
+  margin: 0.25em;
+}
+
+@keyframes rainbow{
+		100%,0%{
+			color: rgb(255,0,0);
+		}
+		8%{
+			color: rgb(255,127,0);
+		}
+		16%{
+			color: rgb(255,255,0);
+		}
+		25%{
+			color: rgb(127,255,0);
+		}
+		33%{
+			color: rgb(0,255,0);
+		}
+		41%{
+			color: rgb(0,255,127);
+		}
+		50%{
+			color: rgb(0,255,255);
+		}
+		58%{
+			color: rgb(0,127,255);
+		}
+		66%{
+			color: rgb(0,0,255);
+		}
+		75%{
+			color: rgb(127,0,255);
+		}
+		83%{
+			color: rgb(255,0,255);
+		}
+		91%{
+			color: rgb(255,0,127);
+		}
+  }
+
+.container {
+  margin-block: 2.5em;
+  background-color: white;
+  margin-left: clamp(1em, 3em, 5em);
+  margin-right: clamp(1em, 3em, 5em);
+  text-align: center;
+  width: 100%;
+}
+
+.inner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@media (max-width: 500px) {
+  .container {
+    margin: 1em;
+  }
+  
+  button {
+    font-size: 2rem !important;
+  }
+}
+
+.shreal-img {
+  width: 25%;
+  max-height: auto;
+  min-width: fit-content;
+}
+
+button {
+  display: block;
+  background-color: #7dd571;
+  font-family: 'Comic Sans MS';
+  font-size: clamp(0.5rem, 5rem, 7.5rem);
+  cursor: pointer;
+  margin: 0.4em 0.4em;
+}

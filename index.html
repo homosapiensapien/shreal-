@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="inner-container">
+      <h1>the shreal shine</h1>
+      <img src="assets/images/shreal.png" class="shreal-img" onclick="changeLabel()">
+      <button data-text-swap="you've prayed to the shreal!">Pray to the Shreal</button>
+    </div>
+  </div>
+      <script>
+        var button = document.querySelectorAll("button")[0];
+
+        button.addEventListener('click', function() {
+          // Save the original text if it's the first time the button is clicked
+          if (button.getAttribute("data-text-original") === null) {
+            button.setAttribute("data-text-original", button.innerHTML);
+          }
+
+          // Swap the text with the 'data-text-swap' attribute
+          if (button.getAttribute("data-text-swap") === button.innerHTML) {
+            button.innerHTML = button.getAttribute("data-text-original");
+          } else {
+            button.innerHTML = button.getAttribute("data-text-swap");
+          }
+
+          // Revert to the original text after 5 seconds
+          setTimeout(function() {
+            button.innerHTML = button.getAttribute("data-text-original");
+          }, 1000); // 5000 milliseconds = 5 seconds
+        }, false);
+      </script>
+</body>
+</html>
