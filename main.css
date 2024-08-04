@@ -80,11 +80,12 @@ h1 {
   }
 }
 
-.shreal-img {
-  width: 25%;
+.shreal-shreal {
+  width: 50%;
   max-height: auto;
   min-width: fit-content;
 }
+
 
 button {
   display: block;
